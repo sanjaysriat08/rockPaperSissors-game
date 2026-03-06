@@ -12,7 +12,7 @@ function playGame(playerMove) {
     if(playerMove === '✊') {          //Rock
 
         if(computerMove === '✊') {
-            result = 'Tie !' ;
+            result = 'Tie .' ;
         }
         else if(computerMove === '✋') {
             result = 'You Lose !' ;
@@ -27,7 +27,7 @@ function playGame(playerMove) {
             result = 'You Win !' ;
         }
         else if(computerMove === '✋') {
-            result = 'Tie !' ;
+            result = 'Tie .' ;
         }
         else if(computerMove === '✌️') {
             result = 'You Lose !' ;
@@ -42,7 +42,7 @@ function playGame(playerMove) {
             result = 'You Win !' ;
         }
         else if(computerMove === '✌️') {
-            result = 'Tie !' ;
+            result = 'Tie .' ;
         }
     }
 
@@ -52,7 +52,7 @@ function playGame(playerMove) {
     else if(result === 'You Lose !') {
         score.Losses += 1;
     }
-    else if(result === 'Tie !') {
+    else if(result === 'Tie .') {
         score.Ties += 1;
     }
 

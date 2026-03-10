@@ -95,3 +95,28 @@ function resetScore() {
     localStorage.removeItem('score');
     document.getElementById('score').innerHTML = `Wins : ${score.Wins} ,Losses : ${score.Losses} ,Ties : ${score.Ties}`;
 }
+
+let autoPlayStatus = false;
+let intervalId;
+
+function autoPlay() {
+    
+    if(!autoPlayStatus) {
+
+        intervalId = setInterval(function() {
+            let playerMove = generateComputerMove();
+            playGame(playerMove);
+        },1000);
+
+        autoPlayStatus = true;
+
+        document.querySelector('.autoPlay-Button').innerHTML = 'Stop';
+
+    }
+    else {
+
+        clearInterval(intervalId);
+        autoPlayStatus = false;
+        document.querySelector('.autoPlay-Button').innerHTML = 'Auto Play';
+    }
+}

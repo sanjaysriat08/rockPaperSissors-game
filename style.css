@@ -34,11 +34,31 @@ body{
 
 .resetButton,.autoPlay-Button {
 
-    background-color: white;
+    background-color: rgb(234, 235, 234);
     color: black;
     border:none;
     padding: 10px 50px;
     margin-top: 20px;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.yesButton,.noButton {
+
+    border:none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.yesButton {
+
+    background-color: green;
+    color: white;
+}
+.noButton {
+
+    background-color: rgb(190, 20, 20);
+    color: white;
 }

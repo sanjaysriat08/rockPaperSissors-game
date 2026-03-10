@@ -89,12 +89,27 @@ function generateComputerMove() {
 
 function resetScore() {
 
+    document.querySelector('.askToResetScore').innerHTML = 
+    `<p>Are you sure you want to reset score ?
+    <button class='yesButton' onclick='resetScoreYes()'>Yes</button>
+    <button class='noButton' onclick='resetScoreNo()'>No</button></p>`
+}
+
+function resetScoreYes() {
     score.Wins = 0;
     score.Losses = 0;
     score.Ties = 0;
     localStorage.removeItem('score');
     document.getElementById('score').innerHTML = `Wins : ${score.Wins} ,Losses : ${score.Losses} ,Ties : ${score.Ties}`;
+    console.log(document.querySelector('.askToResetScore').innerHTML = '');
 }
+
+function resetScoreNo() {
+
+    document.querySelector('.askToResetScore').innerHTML = '';
+}
+
+
 
 let autoPlayStatus = false;
 let intervalId;
